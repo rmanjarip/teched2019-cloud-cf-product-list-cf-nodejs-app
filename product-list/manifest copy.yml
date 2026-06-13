@@ -1,4 +1,5 @@
 applications:
+# Application
 - name: product-list
   instances: 1
   memory: 128M
@@ -11,6 +12,7 @@ applications:
   services:
     - xsuaa-service-tutorial
 
+# Application Router
 - name: approuter
   routes:
     - route: approuter-product-list-manjari-ap1986.cfapps.us10-001.hana.ondemand.com
@@ -27,3 +29,4 @@ applications:
          "url":"https://product-list-manjari-ap1986.cfapps.us10-001.hana.ondemand.com",
          "forwardAuthToken": true}
       ]
+

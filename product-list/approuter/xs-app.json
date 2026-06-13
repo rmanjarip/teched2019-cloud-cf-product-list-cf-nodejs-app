@@ -1,0 +1,15 @@
+{
+  "welcomeFile": "/static/index.html",
+  "routes": [
+    {
+      "source": "^/products/(.*)$",
+      "target": "$1",
+      "destination": "products-destination",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(.*)$",
+      "localDir": "resources"
+    }
+  ]
+}
