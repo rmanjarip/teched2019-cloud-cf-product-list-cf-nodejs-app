@@ -1,0 +1,25 @@
+general:
+  productiveBranch: "main"
+
+stages:
+  Build:
+    npmExecuteLint: false
+
+  Additional Unit Tests:
+    npmExecuteScripts: false
+    karmaExecuteTests: false
+
+  Acceptance:
+    cloudFoundryDeploy: false
+
+  Release:
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "bddd1fcetrial"
+    cfSpace: "dev"
+    cfAppName: "product-list"
+    cfCredentialsId: "deploy-to-cf"
+
+steps:
+  cloudFoundryDeploy:
+    manifest: "product-list/manifest.yml"
