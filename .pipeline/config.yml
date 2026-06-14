@@ -1,5 +1,5 @@
 general:
-  productiveBranch: "main"
+  productiveBranch: "sap-tutorial-xsuaa"
 
 stages:
   Build:
